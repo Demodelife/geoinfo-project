@@ -10,7 +10,7 @@ class GeoNameRetrieveAPIViewTestCase(TestCase):
     """
 
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(cls) -> None:
         """
         Creating a new object at the class level.
         """
@@ -23,14 +23,14 @@ class GeoNameRetrieveAPIViewTestCase(TestCase):
         )
 
     @classmethod
-    def tearDownClass(cls):
+    def tearDownClass(cls) -> None:
         """
         Deleting created object after tests.
         """
 
         cls.object.delete()
 
-    def test_get_geo_object_by_id(self):
+    def test_get_geo_object_by_id(self) -> None:
         """
         Method test.
         Tests getting objects by id.
@@ -53,7 +53,7 @@ class GeoNameListAPIViewTestCase(TestCase):
         'geo_objects_fixture.json',
     ]
 
-    def test_get_list(self):
+    def test_get_list(self) -> None:
         """
         Method test.
         Tests getting a list of objects.
@@ -70,7 +70,7 @@ class GeoNameListAPIViewTestCase(TestCase):
             transform=lambda g: g.pk,
         )
 
-    def test_search(self):
+    def test_search(self) -> None:
         """
         Method test.
         Tests getting a list of objects with query parameter `search`.
@@ -86,7 +86,7 @@ class GeoNameListAPIViewTestCase(TestCase):
             transform=lambda g: g.name,
         )
 
-    def test_comparison(self):
+    def test_comparison(self) -> None:
         """
         Method test.
         Tests getting comparison with query parameters `g1` and `g2`.

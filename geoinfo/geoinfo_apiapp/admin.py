@@ -5,6 +5,10 @@ from geoinfo_apiapp.models import GeoName
 
 @admin.register(GeoName)
 class GeoNameAdmin(admin.ModelAdmin):
+    """
+    Admin model GeoName.
+    """
+
     list_display = (
         'geonameid',
         'name',

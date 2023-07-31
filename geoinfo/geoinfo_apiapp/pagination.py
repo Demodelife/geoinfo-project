@@ -8,7 +8,7 @@ class CustomPagination(PageNumberPagination):
     """
     page_size_query_param = 'count'
 
-    def get_paginated_response(self, data):
+    def get_paginated_response(self, data) -> Response:
         """
         Method overrides paginated response.
         Sets a new value for the page size if specified in the search.
